@@ -1,31 +1,39 @@
-# tfc-demo
-Demo for terraform cloud
+# TFC Demo
 
-## Local
-First we will look at how we run terraform localy. In this scenario a user will use terrafrom on their laptop. There is a spec to deploy a ec2 instance with required subnets etc. A state file is stored localy once the instances are created. 
+This repository serves as a demonstration of using Terraform in various scenarios: locally, with Terraform Cloud (TFC) via the CLI, and in a version-controlled setup.
 
-![Local](./docs/TF_Local.png)
+## Local Deployment
 
-### Apply
+In the local scenario, a user runs Terraform on their laptop to deploy an EC2 instance with required subnets. The state file is stored locally once the instances are created.
+
+![Local Deployment](./docs/TF_Local.png)
+
+### Apply Locally
+
 ```bash
 cd local
 terraform init
 terraform apply
 ```
 
-### Delete
+### Delete Locally
+
 ```bash
 terraform destroy
 ```
 
-## TFC 
-Next we will use TFC using the CLI. This time we use the same commands however we have configured our terrafrom to use TFC which does the work. The statefile now is managed entierley by TFC
+## Terraform Cloud (TFC) with CLI
 
-![cli](./docs/TF_CLI.png)
+Next, we explore the use of Terraform Cloud (TFC) via the CLI. In this scenario, Terraform configurations are executed remotely in TFC, and the state file is managed entirely by TFC.
 
-### Prerequisites
-* [Create a credentials variable set](https://developer.hashicorp.com/terraform/tutorials/cloud-get-started/cloud-create-variable-set)
-* Update org in `main.tf`
+![TFC CLI](./docs/TF_CLI.png)
+
+### Prerequisites for TFC CLI
+
+1. [Create a credentials variable set](https://developer.hashicorp.com/terraform/tutorials/cloud-get-started/cloud-create-variable-set).
+2. Update the organization in `main.tf`.
+
+### Apply with TFC CLI
 
 ```bash
 cd cloud-cli
@@ -33,3 +41,13 @@ terraform login
 terraform init
 terraform apply
 ```
+
+## Version Control System (VCS)
+
+In the version-controlled setup, Terraform configurations are integrated with a version control system (VCS). Changes trigger automated runs in Terraform Cloud, providing a collaborative and auditable workflow.
+
+![VCS Integration](./docs/TF_VCS.png)
+
+For detailed information on VCS integration, please refer to the documentation of your chosen VCS provider.
+
+Feel free to explore each scenario based on your use case and infrastructure requirements.
