@@ -19,3 +19,17 @@ terraform destroy
 ```
 
 ## TFC 
+Next we will use TFC using the CLI. This time we use the same commands however we have configured our terrafrom to use TFC which does the work. The statefile now is managed entierley by TFC
+
+![cli](./docs/TF_CLI.png)
+
+### Prerequisites
+* [Create a credentials variable set](https://developer.hashicorp.com/terraform/tutorials/cloud-get-started/cloud-create-variable-set)
+* Update org in `main.tf`
+
+```bash
+cd cloud-cli
+terraform login
+terraform init
+terraform apply
+```
