@@ -57,3 +57,5 @@ Feel free to explore each scenario based on your use case and infrastructure req
 You can use Terraform Cloud’s native OpenID Connect integration with Vault to get dynamic credentials for the Vault provider in your Terraform Cloud runs. Use the following guides:
 * [Dynamic Credentials with the Vault Provider](https://developer.hashicorp.com/terraform/cloud-docs/workspaces/dynamic-provider-credentials/vault-configuration)
 * [Vault-Backed Dynamic Credentials with the AWS Provider](https://developer.hashicorp.com/terraform/cloud-docs/workspaces/dynamic-provider-credentials/vault-backed/aws-configuration) guide.
+
+![vars](./docs/vars.png)

@@ -14,6 +14,6 @@ path "auth/token/revoke-self" {
 }
 
 # Configure the actual secrets the token should have access to
-path "secret/*" {
+path "aws/*" {
   capabilities = ["read"]
 }
