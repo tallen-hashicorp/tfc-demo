@@ -54,7 +54,7 @@ Feel free to explore each scenario based on your use case and infrastructure req
 
 # Dynamic Credentials with the Vault Provider
 
-You can use Terraform Cloud’s native OpenID Connect integration with Vault to get dynamic credentials for the Vault provider in your Terraform Cloud runs. This guide is taken from [here](https://developer.hashicorp.com/terraform/cloud-docs/workspaces/dynamic-provider-credentials/vault-configuration#configure-terraform-cloud)
+You can use Terraform Cloud’s native OpenID Connect integration with Vault to get dynamic credentials for the Vault provider in your Terraform Cloud runs. This guide is taken from [here](https://developer.hashicorp.com/terraform/cloud-docs/workspaces/dynamic-provider-credentials/vault-backed/aws-configuration)
 
 ## Configure Vault
 You must enable and configure the JWT backend in Vault. These instructions use the Vault CLI commands, but you can also use Terraform to configure Vault. Refer to our [example Terraform configuration](https://github.com/hashicorp/terraform-dynamic-credentials-setup-examples/tree/main/vault).
